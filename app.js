@@ -18,6 +18,7 @@ connectDB();
 
     app.use('/auth',require('./routes/auth'));
     app.use('/admin',require('./routes/admin'));
+    app.use('/student',require('./routes/student'));
 
 app.listen(config.get("PORT"),() => {
     console.log(`server is running on port : ${config.get('PORT')}`);

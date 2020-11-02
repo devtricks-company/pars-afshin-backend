@@ -19,7 +19,7 @@ const adminLoginController = async (req,res) => {
             return res.status(500).json({msg:"password is worng"});
         }
 
-        const token = jwt.sign({id:admin.id,email:admin.email,pic:admin.pic,superAdmin:admin.superAdmin,active:admin.active,createAt:admin.createAt},config.get('SECRETKEY'),{
+        const token = jwt.sign({id:admin.id,name:admin.name,email:admin.email,pic:admin.pic,superAdmin:admin.superAdmin,active:admin.active,createAt:admin.createAt},config.get('SECRETKEY'),{
             expiresIn:"1 day"
         });
 
